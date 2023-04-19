@@ -19,7 +19,7 @@ contract Campaign {
         creator = _creator;
         goal = _goal;
         totalPledged = 0;
-        endAt = _endAt;
+        endAt = (_endAt * 1 days) + block.timestamp;
         claimed = false;
 
     }
