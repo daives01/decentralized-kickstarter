@@ -8,8 +8,8 @@ contract CampaignFactory {
     address[] public deployedCampaigns;
 
     function createCampaign(uint _goal, uint _endAt) public {
-        address newCampaign = address(new Campaign(msg.sender, _goal, _endAt));
-        deployedCampaigns.push(newCampaign);
+        // address newCampaign = address(new Campaign(msg.sender, _goal, _endAt));
+        // deployedCampaigns.push(newCampaign);
     }
 
     function getDeployedCampaigns() public view returns (address[] memory) {

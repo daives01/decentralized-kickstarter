@@ -15,11 +15,11 @@ contract Campaign {
     event Claim(address _address, uint _amount);
     event Refund(address _address, uint _amount);
 
-    constructor(address _creator, uint _goal, uint _endAt) {
-        creator = _creator;
+    function initializeCampaign(uint _goal, uint _endAt) external {
+        creator = msg.sender;
         goal = _goal;
         totalPledged = 0;
-        endAt = _endAt;
+        endAt = (_endAt * 1 days) + block.timestamp;
         claimed = false;
 
     }

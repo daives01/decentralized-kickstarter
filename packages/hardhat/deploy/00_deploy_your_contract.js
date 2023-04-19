@@ -17,7 +17,7 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
   const { deployer } = await getNamedAccounts();
   const chainId = await getChainId();
 
-  await deploy("CampaignFactory", {
+  await deploy("Campaign", {
     // Learn more about args here: https://www.npmjs.com/package/hardhat-deploy#deploymentsdeploy
     from: deployer,
     // args: [ "Hello", ethers.utils.parseEther("1.5") ],
@@ -78,4 +78,4 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
     console.error("Verification Error =>", error);
   }
 };
-module.exports.tags = ["CampaignFactory"];
+module.exports.tags = ["Campaign"];
